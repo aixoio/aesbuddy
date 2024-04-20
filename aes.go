@@ -6,7 +6,7 @@ import (
 	"crypto/rand"
 )
 
-func Aes_GCM_Encrpyt(key []byte, data []byte) ([]byte, error) {
+func AesGCMEncrpyt(key []byte, data []byte) ([]byte, error) {
 	aes, err := aes.NewCipher(key)
 	if err != nil {
 		return []byte{}, err
@@ -28,7 +28,7 @@ func Aes_GCM_Encrpyt(key []byte, data []byte) ([]byte, error) {
 	return cipherbytes, nil
 }
 
-func Aes_GCM_Decrpyt(key []byte, data []byte) ([]byte, error) {
+func AesGCMDecrpyt(key []byte, data []byte) ([]byte, error) {
 
 	aes, err := aes.NewCipher(key)
 	if err != nil {
@@ -45,7 +45,7 @@ func Aes_GCM_Decrpyt(key []byte, data []byte) ([]byte, error) {
 
 	bytes, err := gcm.Open(nil, nonce, cipherbytes, nil)
 	if err != nil {
-		return []byte{}, nil
+		return []byte{}, err
 	}
 
 	return bytes, nil
