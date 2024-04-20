@@ -45,7 +45,7 @@ func Aes_GCM_Decrpyt(key []byte, data []byte) ([]byte, error) {
 
 	bytes, err := gcm.Open(nil, nonce, cipherbytes, nil)
 	if err != nil {
-		return []byte{}
+		return []byte{}, nil
 	}
 
 	return bytes, nil
