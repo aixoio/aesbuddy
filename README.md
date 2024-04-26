@@ -1,4 +1,4 @@
-# aesbuddy - v2.0.0
+# aesbuddy - v1.1.1
 An simple and easy to use AES libary for Go supporting
   - AES GCM 128-bit
   - AES GCM 192-bit
@@ -12,5 +12,5 @@ An simple and easy to use AES libary for Go supporting
 To install the package use
 
 ```Shell
-go get -u github.com/aixoio/aesbuddy@v2.0.0
+go get -u github.com/aixoio/aesbuddy@v1.1.1
 ```
