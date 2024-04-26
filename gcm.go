@@ -8,7 +8,7 @@ import (
 
 // `key` is a 16, 24 or 32 byte slice of your encrpytion key
 // `data` is slice of the data you are trying to encrpyt
-func AesGCMEncrpyt(key []byte, data []byte) ([]byte, error) {
+func AesGCMEncrpyt(key, data []byte) ([]byte, error) {
 	aes, err := aes.NewCipher(key)
 	if err != nil {
 		return []byte{}, err
@@ -32,7 +32,7 @@ func AesGCMEncrpyt(key []byte, data []byte) ([]byte, error) {
 
 // `key` is a 16, 24 or 32 byte slice of your decrpytion key
 // `data` is slice of the data you are trying to decrpyt
-func AesGCMDecrpyt(key []byte, data []byte) ([]byte, error) {
+func AesGCMDecrpyt(key, data []byte) ([]byte, error) {
 
 	aes, err := aes.NewCipher(key)
 	if err != nil {
