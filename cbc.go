@@ -9,9 +9,9 @@ import (
 	"github.com/aixoio/aesbuddy/padding"
 )
 
-// `key` is a 16, 24 or 32 byte slice of your encrpytion key
-// `data` is slice of the data you are trying to encrpyt
-func AesCBCEncrpyt(key, data []byte) ([]byte, error) {
+// `key` is a 16, 24 or 32 byte slice of your encryption key
+// `data` is slice of the data you are trying to encrypt
+func AesCBCEncrypt(key, data []byte) ([]byte, error) {
 	padded_text := padding.PKCS5Padding(data, aes.BlockSize)
 
 	block, err := aes.NewCipher(key)
@@ -32,8 +32,8 @@ func AesCBCEncrpyt(key, data []byte) ([]byte, error) {
 	return cipher_text, err
 }
 
-// `key` is a 16, 24 or 32 byte slice of your encrpytion key
-// `data` is slice of the data you are trying to encrpyt
+// `key` is a 16, 24 or 32 byte slice of your decryption key
+// `data` is slice of the data you are trying to decrypt
 func AesCBCDecrypt(key, data []byte) ([]byte, error) {
 
 	block, err := aes.NewCipher(key)

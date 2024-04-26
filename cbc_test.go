@@ -11,14 +11,14 @@ func TestAesCBC128(t *testing.T) {
 	key := []byte("THIS IS MY KEY!!")
 	data := []byte("MY SECRET MESSAGE")
 
-	enced, err := aesbuddy.AesCBCEncrpyt(key, data)
+	enced, err := aesbuddy.AesCBCEncrypt(key, data)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()
 		return
 	}
 
-	enced2, err := aesbuddy.AesCBCEncrpyt(key, data)
+	enced2, err := aesbuddy.AesCBCEncrypt(key, data)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()
@@ -56,14 +56,14 @@ func TestAesCBC192(t *testing.T) {
 	key := []byte("THIS IS MY KEY!!THIS IS ")
 	data := []byte("MY SECRET MESSAGE")
 
-	enced, err := aesbuddy.AesCBCEncrpyt(key, data)
+	enced, err := aesbuddy.AesCBCEncrypt(key, data)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()
 		return
 	}
 
-	enced2, err := aesbuddy.AesCBCEncrpyt(key, data)
+	enced2, err := aesbuddy.AesCBCEncrypt(key, data)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()
@@ -101,14 +101,14 @@ func TestAesCBC256(t *testing.T) {
 	key := []byte("THIS IS MY KEY!!THIS IS MY KEY!!")
 	data := []byte("MY SECRET MESSAGE")
 
-	enced, err := aesbuddy.AesCBCEncrpyt(key, data)
+	enced, err := aesbuddy.AesCBCEncrypt(key, data)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()
 		return
 	}
 
-	enced2, err := aesbuddy.AesCBCEncrpyt(key, data)
+	enced2, err := aesbuddy.AesCBCEncrypt(key, data)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()

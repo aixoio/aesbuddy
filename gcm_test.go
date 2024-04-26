@@ -11,14 +11,14 @@ func TestAesGCM128(t *testing.T) {
 	key := []byte("THIS IS MY KEY!!")
 	data := []byte("MY SECRET MESSAGE")
 
-	enced, err := aesbuddy.AesGCMEncrpyt(key, data)
+	enced, err := aesbuddy.AesGCMEncrypt(key, data)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()
 		return
 	}
 
-	deced, err := aesbuddy.AesGCMDecrpyt(key, enced)
+	deced, err := aesbuddy.AesGCMDecrypt(key, enced)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()
@@ -43,14 +43,14 @@ func TestAesGCM192(t *testing.T) {
 	key := []byte("THIS IS MY KEY!!THIS IS ")
 	data := []byte("MY SECRET MESSAGE")
 
-	enced, err := aesbuddy.AesGCMEncrpyt(key, data)
+	enced, err := aesbuddy.AesGCMEncrypt(key, data)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()
 		return
 	}
 
-	deced, err := aesbuddy.AesGCMDecrpyt(key, enced)
+	deced, err := aesbuddy.AesGCMDecrypt(key, enced)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()
@@ -75,14 +75,14 @@ func TestAesGCM256(t *testing.T) {
 	key := []byte("THIS IS MY KEY!!THIS IS MY KEY!!")
 	data := []byte("MY SECRET MESSAGE")
 
-	enced, err := aesbuddy.AesGCMEncrpyt(key, data)
+	enced, err := aesbuddy.AesGCMEncrypt(key, data)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()
 		return
 	}
 
-	deced, err := aesbuddy.AesGCMDecrpyt(key, enced)
+	deced, err := aesbuddy.AesGCMDecrypt(key, enced)
 	if err != nil {
 		t.Fatalf(err.Error())
 		t.Fail()

@@ -6,9 +6,9 @@ import (
 	"crypto/rand"
 )
 
-// `key` is a 16, 24 or 32 byte slice of your encrpytion key
-// `data` is slice of the data you are trying to encrpyt
-func AesGCMEncrpyt(key, data []byte) ([]byte, error) {
+// `key` is a 16, 24 or 32 byte slice of your encryption key
+// `data` is slice of the data you are trying to encrypt
+func AesGCMEncrypt(key, data []byte) ([]byte, error) {
 	aes, err := aes.NewCipher(key)
 	if err != nil {
 		return []byte{}, err
@@ -30,9 +30,9 @@ func AesGCMEncrpyt(key, data []byte) ([]byte, error) {
 	return cipherbytes, nil
 }
 
-// `key` is a 16, 24 or 32 byte slice of your decrpytion key
-// `data` is slice of the data you are trying to decrpyt
-func AesGCMDecrpyt(key, data []byte) ([]byte, error) {
+// `key` is a 16, 24 or 32 byte slice of your decryption key
+// `data` is slice of the data you are trying to decrypt
+func AesGCMDecrypt(key, data []byte) ([]byte, error) {
 
 	aes, err := aes.NewCipher(key)
 	if err != nil {
